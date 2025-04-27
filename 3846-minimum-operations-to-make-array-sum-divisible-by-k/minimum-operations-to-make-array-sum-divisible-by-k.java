@@ -4,12 +4,6 @@ class Solution {
         for(int i=0;i<nums.length;i++){
             sum+=nums[i];
         }
-        int c=0;
-        int temp=sum;
-        while(temp%k!=0){
-            c++;
-            temp--;
-        }
-        return c;
+        return sum%k;
     }
 }
