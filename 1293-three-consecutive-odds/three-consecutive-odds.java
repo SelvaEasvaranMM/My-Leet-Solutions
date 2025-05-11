@@ -6,7 +6,6 @@ class Solution {
             else{
                 c=0;
             }
-            System.out.print(c);
             if(c==3) break;
         }
         if(c==3) return true;
