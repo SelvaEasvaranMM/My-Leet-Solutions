@@ -7,6 +7,7 @@ class Solution {
             while(x!=0){
                 int k=x%10;
                 pro*=k;
+                if(pro==0) break;
                 x/=10;
             }
             if(pro%t==0) return temp;
