@@ -53,9 +53,6 @@ class Solution {
                 st.push(ch);
             } 
         }
-        // while(!st.isEmpty()){
-        //     System.out.print(st.pop());
-        // }
         if(st.isEmpty()) return true;
         return false;
     }
