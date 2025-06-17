@@ -1,6 +1,6 @@
 class Solution {
     public boolean isValid(String s) {
-        while(s.length()!=0){
+        /*while(s.length()!=0){
             if(s.contains("()")){
                 s=s.replace("()","");
             }      
@@ -12,6 +12,51 @@ class Solution {
             }
             else return false;
         }
-        return true;
+        return true;*/
+        if(s.length()<=1) return false;
+        Stack<Character> st=new Stack<>();
+        for(char ch:s.toCharArray()){
+            if(ch==')'){
+                if(!st.isEmpty()){
+                    if(st.peek()=='(') st.pop();
+                    else{
+                        st.push(ch);
+                    }
+                }
+                else{
+                    st.push(ch);
+                }
+            }
+            else if(ch==']'){
+                if(!st.isEmpty()){
+                    if(st.peek()=='[') st.pop();
+                    else{
+                        st.push(ch);
+                    }
+                }
+                else{
+                    st.push(ch);
+                }
+            }
+            else if(ch=='}'){
+                if(!st.isEmpty()){
+                    if(st.peek()=='{') st.pop();
+                    else{
+                        st.push(ch);
+                    }
+                }
+                else{
+                    st.push(ch);
+                }
+            } 
+            else {
+                st.push(ch);
+            } 
+        }
+        // while(!st.isEmpty()){
+        //     System.out.print(st.pop());
+        // }
+        if(st.isEmpty()) return true;
+        return false;
     }
 }
