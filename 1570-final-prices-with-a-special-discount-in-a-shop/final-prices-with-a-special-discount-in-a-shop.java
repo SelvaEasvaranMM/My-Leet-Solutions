@@ -1,6 +1,5 @@
 class Solution {
     public int[] finalPrices(int[] prices) {
-        int k=0;
         int ans[]=new int[prices.length];
         for(int i=0;i<prices.length;i++){
             ans[i]=prices[i];
