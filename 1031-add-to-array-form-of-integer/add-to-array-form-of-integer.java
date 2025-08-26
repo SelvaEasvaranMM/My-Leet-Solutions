@@ -6,9 +6,8 @@ class Solution {
             sb.append(String.valueOf(i));
         }
         BigInteger a=new BigInteger(sb.toString());
-        BigInteger b=new BigInteger(String.valueOf(k));
-        BigInteger val=a.add(b);
-        String temp=String.valueOf(val);
+        BigInteger b=a.add(BigInteger.valueOf(k));
+        String temp=String.valueOf(b);
         List<Integer> ls=new ArrayList<>();
         for(int i=0;i<temp.length();i++){
             ls.add(temp.charAt(i)-'0');
